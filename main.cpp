@@ -13,27 +13,16 @@
 using namespace  std;
 
 void testHeroProgram();
+void testPlayableProgram();
 
 
 int main()
 {
 
-	// testHeroProgram();
+	testHeroProgram();
+	//testPlayableProgram();
 
 
-	Playable* playables[3];
-
-	Game game;
-	Movie movie;
-	Record record;
-
-	playables[0] = &game;
-	playables[1] = &movie;
-	playables[2] = &record;
-
-	playables[0]->play();
-	playables[1]->play();
-	playables[2]->play();
 
 
 	return 0;
@@ -55,4 +44,23 @@ void testHeroProgram()
 
 	hero2.act();
 
+}
+
+void testPlayableProgram()
+{
+	Playable* playables[3];
+
+	Game game;
+	Movie movie;
+	Record record;
+
+	playables[0] = &game;
+	playables[1] = &movie;
+	playables[2] = &record;
+
+	playables[0]->play();
+	cout << endl;
+	playables[1]->play();
+	cout << endl;
+	playables[2]->play();
 }
